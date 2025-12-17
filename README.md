@@ -94,6 +94,12 @@ python 1.downloadModel.py
 - Must be replaced by upstream dataset construction  
 - Kept for historical reference only  
 
+
+**Usage:**
+```bash
+python 2.extract_top200_peaks.py
+```
+
 ---
 
 ### 3. `3.dataCleaningMatching.py`
@@ -107,6 +113,12 @@ python 1.downloadModel.py
 - Used in earlier experiments  
 - Superseded by upstream dataset builders  
 - Kept only for reproducibility of legacy results  
+
+
+**Usage:**
+```bash
+python 3.dataCleaningMatching.py
+```
 
 
 ---
