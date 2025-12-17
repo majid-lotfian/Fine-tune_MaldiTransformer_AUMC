@@ -65,7 +65,7 @@ aumc_cleaned_labels_esblV2.csv
 
 ## Repository Structure and Python Files
 
-### 1. `downloadModel.py`
+### 1. `1.downloadModel.py`
 
 **Purpose:** one-time setup utility  
 
@@ -75,28 +75,14 @@ aumc_cleaned_labels_esblV2.csv
 
 **Usage:**
 ```bash
-python downloadModel.py
+python 1.downloadModel.py
 ```
 
 ---
 
-### 2. `dataCleaningMatching.py`
 
-**Purpose:** legacy label construction  
 
-- Merges spectrum UIDs with outcome metadata  
-- Maps ESBL labels to binary targets  
-
-**Status:**
-- Used in earlier experiments  
-- Superseded by upstream dataset builders  
-- Kept only for reproducibility of legacy results  
-
-This script should **not** be part of the current pipeline.
-
----
-
-### 3. `extract_top200_peaks.py`
+### 2. `2.extract_top200_peaks.py`
 
 **Purpose:** legacy feature extraction  
 
@@ -110,7 +96,22 @@ This script should **not** be part of the current pipeline.
 
 ---
 
-### 4. `1.1.train_maldi_amrV2.py`
+### 3. `3.dataCleaningMatching.py`
+
+**Purpose:** legacy label construction  
+
+- Merges spectrum UIDs with outcome metadata  
+- Maps ESBL labels to binary targets  
+
+**Status:**
+- Used in earlier experiments  
+- Superseded by upstream dataset builders  
+- Kept only for reproducibility of legacy results  
+
+
+---
+
+### 4. `4.2.train_maldi_amrV2.py`
 
 **Purpose:** downstream fine-tuning and evaluation  
 
@@ -126,7 +127,7 @@ This is the **only training script that should be used**.
 
 **Usage:**
 ```bash
-python 1.1.train_maldi_amrV2.py
+python 4.2.train_maldi_amrV2.py
 ```
 
 This script assumes a **valid dataset artifact is already available**.
@@ -152,7 +153,7 @@ Handled outside this repository:
 ### Step 2 — Model acquisition
 
 ```bash
-python downloadModel.py
+python 1.downloadModel.py
 ```
 
 ---
@@ -160,7 +161,7 @@ python downloadModel.py
 ### Step 3 — Fine-tuning and evaluation
 
 ```bash
-python 1.1.train_maldi_amrV2.py
+python 4.2.train_maldi_amrV2.py
 ```
 
 ---
