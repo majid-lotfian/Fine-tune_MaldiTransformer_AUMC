@@ -136,7 +136,15 @@ This script assumes a **valid dataset artifact is already available**.
 
 ## Conceptual Pipeline
 
-### Step 1 — Dataset construction (UPSTREAM, external)
+### Step 1 — Model acquisition
+
+```bash
+python 1.downloadModel.py
+```
+
+---
+
+### Step 2 — Dataset construction (UPSTREAM, external)
 
 Handled outside this repository:
 
@@ -147,14 +155,6 @@ Handled outside this repository:
 - Optional group-aware splitting  
 
 **Output:** dataset artifact compatible with this repository.
-
----
-
-### Step 2 — Model acquisition
-
-```bash
-python 1.downloadModel.py
-```
 
 ---
 
