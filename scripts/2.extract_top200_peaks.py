@@ -80,5 +80,6 @@ for txt_file in tqdm(txt_files):
 np.save(OUTPUT_FILE, np.stack(peaks_list))
 pd.Series(uids).to_csv(UIDS_FILE, index=False, header=False)
 
-print(f"✅ Saved {len(peaks_list)} spectra to: {OUTPUT_FILE}")
-print(f"🆔 Saved UIDs to: {UIDS_FILE}")
+print(f"Saved {len(peaks_list)} spectra to: {OUTPUT_FILE}")
+print(f"Saved UIDs to: {UIDS_FILE}")
+
