@@ -198,7 +198,7 @@ class UnfreezeEncoderCallback(TrainerCallback):
             for p in model.encoder.parameters():
                 p.requires_grad = True
             self.unfroze = True
-            print(f"🔓 Unfroze encoder after epoch {int(state.epoch)}.")
+            print(f"Unfroze encoder after epoch {int(state.epoch)}.")
 
 # ----------------------------
 # Main
