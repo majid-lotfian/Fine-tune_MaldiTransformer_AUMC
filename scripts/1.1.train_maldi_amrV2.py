@@ -145,7 +145,7 @@ class MaldiClassifier(nn.Module):
         
         
         #if not torch.isfinite(logits).all():
-         #   print("⚠️ NaN or Inf detected in logits during forward pass!")
+         #   print("NaN or Inf detected in logits during forward pass!")
           #  print("Sample logits:", logits[:5])
            # print("Any NaN in encoder output:", not torch.isfinite(seq).all())
 
@@ -296,7 +296,6 @@ if __name__ == "__main__":
         eval_strategy="epoch",
         save_strategy="no",
         learning_rate=2e-5,
-        #learning_rate=5e-5,
         per_device_train_batch_size=32,
         per_device_eval_batch_size=32,
         num_train_epochs=5,
